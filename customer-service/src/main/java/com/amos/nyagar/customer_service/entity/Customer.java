@@ -8,6 +8,7 @@ import java.time.LocalDateTime;
 @Table(name = "customers")
 @Data
 public class Customer {
+    
     @Id
     @Column(name = "customer_id")
     private String customerId;

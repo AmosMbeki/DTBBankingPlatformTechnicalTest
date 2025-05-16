@@ -1,4 +1,4 @@
-package com.amos.nyagar.account_service.testutils;
+package com.amos.nyagar.account_service.utils.testutils;
 
 import com.amos.nyagar.account_service.entity.Account;
 import com.amos.nyagar.account_service.entity.DTO.AccountDTO;

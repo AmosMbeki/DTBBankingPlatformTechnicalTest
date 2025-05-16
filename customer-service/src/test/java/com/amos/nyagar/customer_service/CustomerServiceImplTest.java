@@ -1,9 +1,10 @@
-package com.amos.nyagar.customer_service.service.concrete;
+package com.amos.nyagar.customer_service;
 
 import com.amos.nyagar.customer_service.entity.Customer;
 import com.amos.nyagar.customer_service.entity.DTO.CustomerDTO;
 import com.amos.nyagar.customer_service.repository.CustomerRepository;
 import com.amos.nyagar.customer_service.service.abstracts.mapper.CustomerMapper;
+import com.amos.nyagar.customer_service.service.concrete.CustomerServiceImpl;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

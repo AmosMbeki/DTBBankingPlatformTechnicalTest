@@ -1,4 +1,4 @@
-package com.amos.nyagar.account_service.service.concrete;
+package com.amos.nyagar.account_service;
 
 
 
@@ -6,6 +6,7 @@ import com.amos.nyagar.account_service.entity.Account;
 import com.amos.nyagar.account_service.entity.DTO.AccountDTO;
 import com.amos.nyagar.account_service.repository.AccountRepository;
 import com.amos.nyagar.account_service.service.abstracts.mapper.AccountMapper;
+import com.amos.nyagar.account_service.service.concrete.AccountServiceImpl;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

@@ -1,4 +1,5 @@
-package com.amos.nyagar.customer_service.controller;
+package com.amos.nyagar.customer_service;
+import com.amos.nyagar.customer_service.controller.CustomerController;
 import com.amos.nyagar.customer_service.entity.DTO.CustomerDTO;
 import com.amos.nyagar.customer_service.service.abstracts.CustomerService;
 

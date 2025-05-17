@@ -11,14 +11,14 @@ A modular banking platform enabling customers to access card services through th
 flowchart LR
     subgraph MICROSERVICES["Microservices (Platform)"]
         direction TB
-        CUSTOMER_SERVICE[Customer Service:8081] --> CUSTOMER_DB[(Customer DB)]
-        ACCOUNT_SERVICE[Account Service:8082] --> ACCOUNT_DB[(Account DB)]
-        CARD_SERVICE[Card Service:8083] --> CARD_DB[(Card DB)]
+        CUSTOMER_SERVICE[Customer Service\n:8081] --> CUSTOMER_DB[(Customer DB)]
+        ACCOUNT_SERVICE[Account Service\n:8082] --> ACCOUNT_DB[(Account DB)]
+        CARD_SERVICE[Card Service\n:8083] --> CARD_DB[(Card DB)]
     end
-
+    
     CUSTOMER_SERVICE <-..-> ACCOUNT_SERVICE
     ACCOUNT_SERVICE <-..-> CARD_SERVICE
-
+    
     style MICROSERVICES fill:#f0f0f0,stroke:#555,stroke-width:2px
     style CUSTOMER_SERVICE fill:#b3e6ff,stroke:#333
     style ACCOUNT_SERVICE fill:#b3e6ff,stroke:#333

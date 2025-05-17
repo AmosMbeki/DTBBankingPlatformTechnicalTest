@@ -1,5 +1,3 @@
-I understand your frustration. Here's the complete README.md file as a single, continuous block with no breaks between sections:
-
 ````markdown
 # 🏦 DTB Banking Platform Technical Test
 
@@ -7,28 +5,15 @@ A modular banking platform enabling customers to access card services through th
 
 ## 📊 Data Flow Diagrams
 
-### Level 0 DFD (Context Diagram)
-
-```mermaid
-flowchart TD
-    CUSTOMER([Customer]) <--> PLATFORM[[Banking Platform]]
-    PLATFORM <--> EXTERNAL[[External Bank Systems]]
-
-    style CUSTOMER fill:#ffd6e7,stroke:#333
-    style PLATFORM fill:#d6f5ff,stroke:#333,stroke-width:2px
-    style EXTERNAL fill:#e3ffd6,stroke:#333
-```
-````
-
-### Level 1 DFD (Microservices Breakdown)
+### (Microservices Breakdown)
 
 ```mermaid
 flowchart LR
     subgraph MICROSERVICES["Microservices (Platform)"]
         direction TB
-        CUSTOMER_SERVICE[Customer Service\n:8081] --> CUSTOMER_DB[(Customer DB)]
-        ACCOUNT_SERVICE[Account Service\n:8082] --> ACCOUNT_DB[(Account DB)]
-        CARD_SERVICE[Card Service\n:8083] --> CARD_DB[(Card DB)]
+        CUSTOMER_SERVICE[Customer Service:8081] --> CUSTOMER_DB[(Customer DB)]
+        ACCOUNT_SERVICE[Account Service:8082] --> ACCOUNT_DB[(Account DB)]
+        CARD_SERVICE[Card Service:8083] --> CARD_DB[(Card DB)]
     end
 
     CUSTOMER_SERVICE <-..-> ACCOUNT_SERVICE

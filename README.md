@@ -1,34 +1,32 @@
 # 🏦 DTB Banking Platform Technical Test
 
-## Data Flow Diagrams
+## 📊 Data Flow Diagrams
 
 ### Level 0 DFD (Context Diagram)
+```mermaid
+flowchart TD
+    A[Customer] <--> B[Banking Platform]
+    B <--> C[Bank Systems]
+    style A fill:#f9f,stroke:#333
+    style B fill:#bbf,stroke:#333
+    style C fill:#f9f,stroke:#333
 
-A modular banking platform enabling customers to access card services through three core microservices.
-
-+-------------+       +-------------------+       +-------------+
-|             |       |                   |       |             |
-|  Customer   |<----->| Banking Platform  |<----->|   Bank      |
-|             |       |                   |       |  Systems    |
-+-------------+       +-------------------+       +-------------+
-
-### Level 1 DFD (Microservices Breakdown)
-
-+----------------+       +----------------+       +----------------+
-|                |       |                |       |                |
-| Customer       |       | Account        |       | Card           |
-| Service        |       | Service        |       | Service        |
-|                |       |                |       |                |
-+-------+--------+       +-------+--------+       +-------+--------+
-        |                        |                        |
-        |                        |                        |
-        v                        v                        v
-+----------------+       +----------------+       +----------------+
-|                |       |                |       |                |
-| Customer       |       | Account        |       | Card           |
-| Database       |       | Database       |       | Database       |
-|                |       |                |       |                |
-+----------------+       +----------------+       +----------------+
+flowchart LR
+    subgraph Microservices
+        A[Customer Service] --> D[(Customer DB)]
+        B[Account Service] --> E[(Account DB)]
+        C[Card Service] --> F[(Card DB)]
+    end
+    
+    A -- API Calls --> B
+    B -- API Calls --> C
+    
+    style A fill:#9cf,stroke:#333
+    style B fill:#9cf,stroke:#333
+    style C fill:#9cf,stroke:#333
+    style D fill:#f96,stroke:#333
+    style E fill:#f96,stroke:#333
+    style F fill:#f96,stroke:#333
 
 ## 📦 Services
 

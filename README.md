@@ -1,6 +1,34 @@
 # 🏦 DTB Banking Platform Technical Test
 
+## Data Flow Diagrams
+
+### Level 0 DFD (Context Diagram)
+
 A modular banking platform enabling customers to access card services through three core microservices.
+
++-------------+       +-------------------+       +-------------+
+|             |       |                   |       |             |
+|  Customer   |<----->| Banking Platform  |<----->|   Bank      |
+|             |       |                   |       |  Systems    |
++-------------+       +-------------------+       +-------------+
+
+### Level 1 DFD (Microservices Breakdown)
+
++----------------+       +----------------+       +----------------+
+|                |       |                |       |                |
+| Customer       |       | Account        |       | Card           |
+| Service        |       | Service        |       | Service        |
+|                |       |                |       |                |
++-------+--------+       +-------+--------+       +-------+--------+
+        |                        |                        |
+        |                        |                        |
+        v                        v                        v
++----------------+       +----------------+       +----------------+
+|                |       |                |       |                |
+| Customer       |       | Account        |       | Card           |
+| Database       |       | Database       |       | Database       |
+|                |       |                |       |                |
++----------------+       +----------------+       +----------------+
 
 ## 📦 Services
 
@@ -12,13 +40,25 @@ A modular banking platform enabling customers to access card services through th
 
 ## 🚀 Getting Started
 
-### Prerequisites
+### System Prerequisites
 - Java 17+
 - Maven 3.8+
 - Docker
 
 ### Installation
+
+## `Build and Run Project`
+> Requires **JDK 21** to run the project, **Git** to pull from remote repository, and **Docker** to run docker-compose
+
+Follow the steps to build and run the project:
+- Clone the repository from Git
 ```bash
-git clone https://github.com/AmosMbeki/DTBBankingPlatformTechnicalTest.git
-cd DTBBankingPlatformTechnicalTest
-mvn clean install
+  git clone git clone https://github.com/AmosMbeki/DTBBankingPlatformTechnicalTest.git 
+```
+- Open the project file
+```shell
+  cd DTBBankingPlatformTechnicalTest 
+```
+- Run the project with Docker
+```shell
+  docker-compose up -d && docker-compose down

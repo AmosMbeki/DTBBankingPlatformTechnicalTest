@@ -1,4 +1,4 @@
-````markdown
+
 # 🏦 DTB Banking Platform Technical Test
 
 A modular banking platform enabling customers to access card services through three core microservices.
@@ -59,6 +59,3 @@ mvn test
 4. Push to the branch
 5. Open a Pull Request
 
-```
-
-```

@@ -39,17 +39,16 @@ Follow the steps to build and run the project:
 ```shell
   cd DTBBankingPlatformTechnicalTest
 ```
-
-- Run the project with Docker
-
+- Execute the command below to generate clean build file for each service /account-service /card-service and /customer-service
 ```shell
-  docker-compose up -d && docker-compose down
+  mvn clean install
 ```
 
-<!-- ## 🧪 Testing
-```bash
-mvn test
-``` -->
+- After the build run the project with Docker
+
+```shell
+  docker compose up --build
+```
 
 ## 🤝 Contributing
 

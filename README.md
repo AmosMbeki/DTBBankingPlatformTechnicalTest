@@ -1,4 +1,9 @@
+I understand your frustration. Here's the complete README.md file as a single, continuous block with no breaks between sections:
+
+```markdown
 # 🏦 DTB Banking Platform Technical Test
+
+A modular banking platform enabling customers to access card services through three core microservices.
 
 ## 📊 Data Flow Diagrams
 
@@ -10,23 +15,26 @@ flowchart TD
     style A fill:#f9f,stroke:#333
     style B fill:#bbf,stroke:#333
     style C fill:#f9f,stroke:#333
+```
 
+### Level 1 DFD (Microservices Breakdown)
+```mermaid
 flowchart LR
     subgraph Microservices
+        direction TB
         A[Customer Service] --> D[(Customer DB)]
         B[Account Service] --> E[(Account DB)]
         C[Card Service] --> F[(Card DB)]
     end
-    
     A -- API Calls --> B
     B -- API Calls --> C
-    
     style A fill:#9cf,stroke:#333
     style B fill:#9cf,stroke:#333
     style C fill:#9cf,stroke:#333
     style D fill:#f96,stroke:#333
     style E fill:#f96,stroke:#333
     style F fill:#f96,stroke:#333
+```
 
 ## 📦 Services
 
@@ -38,13 +46,12 @@ flowchart LR
 
 ## 🚀 Getting Started
 
-### System Prerequisites
+### Prerequisites
 - Java 17+
 - Maven 3.8+
-- Docker
+- Docker (optional)
 
 ### Installation
-
 ## `Build and Run Project`
 > Requires **JDK 21** to run the project, **Git** to pull from remote repository, and **Docker** to run docker-compose
 
@@ -60,3 +67,17 @@ Follow the steps to build and run the project:
 - Run the project with Docker
 ```shell
   docker-compose up -d && docker-compose down
+```
+
+<!-- ## 🧪 Testing
+```bash
+mvn test
+``` -->
+
+## 🤝 Contributing
+1. Fork the repository
+2. Create your feature branch
+3. Commit your changes
+4. Push to the branch
+5. Open a Pull Request
+```

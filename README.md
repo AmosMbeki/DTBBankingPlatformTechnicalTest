@@ -39,7 +39,7 @@ Follow the steps to build and run the project:
 ```shell
   cd DTBBankingPlatformTechnicalTest
 ```
-- Execute the command below to generate clean build file for each service /account-service /card-service and /customer-service
+- Set the environment variables for application.properties to match the values in the docker-compose.yml for all 3 services. Then execute the command below to generate clean build file for each service /account-service /card-service and /customer-service
 ```shell
   mvn clean install
 ```
